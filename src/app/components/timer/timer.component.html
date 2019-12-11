@@ -1,0 +1,31 @@
+<div id="timer-container">
+  <!-- timer buttons -->
+  <div class="top-btn-container">
+    <button class="btn btn-green" (click)="startTimer()">
+      START!
+    </button>
+    <button class="btn btn-red" (click)="stopInerval()">
+      STOP!
+    </button>
+
+    <br>
+
+    <button class="btn" (click)="pauseTimer()" >
+      PAUSE!
+    </button>
+    <button class="btn" (click)="contineTimer()">
+      CONTINE!
+    </button>
+  </div>
+
+  <!-- timer main -->
+  <div class="timer-main mt-40">
+    <svg width="300" height="300" >
+        <circle cx="101" cy="101" r="100" fill="rgb(44,44,44)" stroke-width="1" stroke="rgb(0,0,0)"/>
+        <line style="transition: 0.3s;" x1="101" y1="101" [attr.x2]="arrowPosition.x" [attr.y2]="arrowPosition.y" stroke-width="4" stroke="rgb(0,123,0)"/>
+        <text x="76" y="139" text-anchor="center" fill="white" style="font-size: 20px;text-align: center;">
+          <tspan x="50%" y="139">{{ floor(timeCounter/60/1000) + ':' + (timeCounter/1000%60).toFixed(1) }}</tspan>
+        </text>
+    </svg>
+  </div>
+</div>
