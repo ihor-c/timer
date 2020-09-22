@@ -15,13 +15,11 @@ import { HttpService } from './services/http.service';
 
 // pages
 import { MaterialLoginPageComponent } from './pages/material-login-page/material-login-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent,
     MainPageComponent,
     HeaderAppBarComponent,
     TimerComponent,
